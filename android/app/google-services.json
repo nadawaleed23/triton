@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "115183806146",
+    "firebase_url": "https://triton-37ec3-default-rtdb.firebaseio.com",
+    "project_id": "triton-37ec3",
+    "storage_bucket": "triton-37ec3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115183806146:android:abe8ffa2b2b3f99c9dbd5b",
+        "android_client_info": {
+          "package_name": "com.example.triton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-UTCksZCe_j8ccQC0Dy92mVYL69ePLMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
