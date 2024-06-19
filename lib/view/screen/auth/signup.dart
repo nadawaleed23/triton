@@ -143,12 +143,12 @@ class SignUp extends StatelessWidget {
                           valid: (val) {
                             return validInput(val!, 5, 20, "confirmPassword");
                           },
-                          obscureText: controller.isshowpassword,
-                          onTapIcon: (){controller.showPassword();},
+                          obscureText: controller.isconfirmpassword,
+                          onTapIcon: (){controller.confirmPassword();},
                           textInputType: TextInputType.visiblePassword,
                           mycontroller: controller.confirm,
                           hinttext: "Confirm Password",
-                          iconData: controller.isshowpassword
+                          iconData: controller.isconfirmpassword
                               ? Icons.visibility
                               : Icons.visibility_off,
                           labeltext: "ConfirmPassword",

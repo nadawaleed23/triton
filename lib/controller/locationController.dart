@@ -64,7 +64,7 @@ class LocImp extends LocCon  {
     // print(distanceInMeters);
      if(distanceInMeters>3){
      DatabaseReference distanceRef =
-     FirebaseDatabase.instance.ref('distance');
+     FirebaseDatabase.instance.ref('sensorsData');
      distanceRef.update({'distance':distanceInMeters});
      DatabaseReference relayRef =
      FirebaseDatabase.instance.ref('sensorsData');
@@ -72,7 +72,7 @@ class LocImp extends LocCon  {
      }
      //FirebaseMessaging.instance.getToken().then((value) => print(value));
 
-     Get.offAllNamed( "/home");
+     //Get.toNamed( "/home");
    }
 
 

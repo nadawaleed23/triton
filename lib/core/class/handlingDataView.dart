@@ -35,14 +35,14 @@ class HandlingDataRequest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return statusRequest == StatusRequest.loading
-        ? //Center(child: Lottie.asset(AppImageAsset.loading, width: 250, height: 250))
-    Center(child: Text("loading"),)
+        ? Center(child: Lottie.asset(AppImageAsset.loading, width: 250, height: 250))
+    //Center(child: Text("loading"),)
         : statusRequest == StatusRequest.offlinefailure
-        ? //Center(child: Lottie.asset(AppImageAsset.offline,width: 250, height: 250))
-    Center(child: Text("offline"),)
+        ?Center(child: Lottie.asset(AppImageAsset.offline,width: 250, height: 250))
+   // Center(child: Text("offline"),)
         : statusRequest == StatusRequest.serverfailure
-        ?// Center(child: Lottie.asset(AppImageAsset.serverIssues, width: 250, height: 250))
-    Center(child: Text("ff"),)
+        ?Center(child: Lottie.asset(AppImageAsset.serverIssues, width: 250, height: 250))
+   // Center(child: Text("ff"),)
         : widget;
   }
 }

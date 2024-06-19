@@ -12,7 +12,7 @@ import '../../core/constant/color.dart';
 class Home extends StatelessWidget {
   Home({super.key});
 
-  final ref = FirebaseDatabase.instance.ref('sensorsData/gpsData');
+  final ref = FirebaseDatabase.instance.ref('sensorsData');
 
   @override
   Widget build(BuildContext context) {
@@ -39,18 +39,18 @@ class Home extends StatelessWidget {
             decoration: BoxDecoration(
                 color: AppColors.white),
             accountName: Text(
-              'NadaWaleed23',style: TextStyle(color: Colors.black)
+              'NadaWaleed23',style: TextStyle(color: Colors.black45)
 
             ),
             accountEmail: Text(
-              "Nadawaleeddm2002@gmail.com",style: TextStyle(color: Colors.black),
+              "Nadawaleeddm2002@gmail.com",style: TextStyle(color: Colors.grey, fontSize: 12),
 
             ),
             currentAccountPicture: CircleAvatar(
               backgroundImage: const AssetImage("assets/images/cute-girl-vector-art-profile-picture-jhbu3wt713zj2bti.jpg"),
           ),),
           ListTile(
-            trailing: Icon(Icons.home,color: AppColors.blue,),
+            leading: Icon(Icons.home,color: AppColors.blue,),
 
             title:  Text('Home',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
             },
           ),
           ListTile(
-            trailing: Icon(Icons.person,color: AppColors.blue,),
+            leading: Icon(Icons.person,color: AppColors.blue,),
 
             title:  Text('Profile',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
             },
           ),
           ListTile(
-            trailing: Icon(Icons.settings,color: AppColors.blue,),
+            leading: Icon(Icons.settings,color: AppColors.blue,),
 
             title:  Text('Setting',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
           ),
 
           ListTile(
-            trailing: Icon(Icons.pool,color: AppColors.blue,),
+            leading: Icon(Icons.pool,color: AppColors.blue,),
 
             title: Text('Instructions',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
           ),
 
           ListTile(
-            trailing: Icon(Icons.people,color: AppColors.blue,),
+            leading: Icon(Icons.people,color: AppColors.blue,),
 
             title:  Text('Linked Devices',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -92,7 +92,7 @@ class Home extends StatelessWidget {
             },
           ),
           ListTile(
-            trailing:Icon(Icons.info,color: AppColors.blue,),
+            leading:Icon(Icons.info,color: AppColors.blue,),
 
             title:  Text('About',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -100,7 +100,7 @@ class Home extends StatelessWidget {
             },
           ),
           ListTile(
-            trailing: Icon(Icons.logout,color: AppColors.blue,),
+            leading: Icon(Icons.logout,color: AppColors.blue,),
 
             title:  Text('Log Out',style: TextStyle(color: AppColors.blue)),
             onTap: () {
@@ -130,8 +130,41 @@ class Home extends StatelessWidget {
                 height: 300,
                 child: Card(color: AppColors.white,
                   elevation: 4,
-                  child:
-                   FirebaseAnimatedList(query: ref, itemBuilder: (BuildContext context, DataSnapshot snapshot, Animation<double> animation, int index) {
+                  child: Column(
+                    children: [
+                      Card(color: AppColors.white,
+
+                          child: ListTile(leading: SvgPicture.asset("assets/svg/game-icons_life-jacket.svg"
+                          ,
+                          height: 20,
+                          width:20,
+                        ),
+                          title: Text("Nada's Shirt"),
+                          subtitle:
+
+                          Row(children: [SvgPicture.asset("assets/svg/monitor-heart-rate-info.svg"
+                            ,
+                            height: 15,
+                            width:15,
+                          ),
+                            Text(controller.heartRate,style: TextStyle(fontSize: 10),),
+                            Gap(10),
+                            SvgPicture.asset("assets/svg/material-symbols_spo2-outline.svg"
+                              ,
+                              height: 15,
+                              width:15,
+                            ),
+                            Text(controller.spo2,style: TextStyle(fontSize: 10),),
+                          ],
+
+
+                          ), trailing: IconButton(onPressed: () {  }, icon:Icon(Icons.arrow_right,size: 30,color: AppColors.blue,),),
+
+                        ),
+                      ),
+                    ],
+                  )
+               /*    FirebaseAnimatedList(query: ref, itemBuilder: (BuildContext context, DataSnapshot snapshot, Animation<double> animation, int index) {
                     return Card(color: AppColors.white,
                       child: ListTile(leading: SvgPicture.asset("assets/svg/game-icons_life-jacket.svg"
                         ,
@@ -162,7 +195,7 @@ class Home extends StatelessWidget {
                       ),
                     );
 
-                  }),
+                  }),*/
 
 
                 ),

@@ -42,8 +42,9 @@ class SignupImp extends SignUpnCon{
     if(formData!.validate()){
 
       statusRequest = StatusRequest.loading;
+      update() ;
       var response = await signupData.postData(
-          name.text,  email.text,password.text, confirm.text);
+          name.text,  email.text, password.text, confirm.text);
       print("=============================== Controller $response ");
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
@@ -51,7 +52,7 @@ class SignupImp extends SignUpnCon{
           // data.addAll(response['data']);
           Get.offAllNamed("/login");
         } else {
-          Get.defaultDialog(title: "ُWarning" , middleText: "Phone Number Or Email Already Exists") ;
+          Get.defaultDialog(title: "ُWarning" , middleText: "Email Already Exists") ;
           statusRequest = StatusRequest.failure;
         }
       }

@@ -40,7 +40,7 @@ if(formData!.validate()){
   if (StatusRequest.success == statusRequest) {
     if (response['status'] == "success") {
       // data.addAll(response['data']);
-      Get.offAllNamed("/home");
+      Get.offAllNamed("/location");
     } else {
       Get.defaultDialog(title: "ُWarning" , middleText: "Email Or Password Not Correct") ;
       statusRequest = StatusRequest.failure;

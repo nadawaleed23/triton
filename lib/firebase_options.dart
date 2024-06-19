@@ -68,4 +68,5 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://triton-37ec3-default-rtdb.firebaseio.com',
     storageBucket: 'triton-37ec3.appspot.com',
   );
+
 }

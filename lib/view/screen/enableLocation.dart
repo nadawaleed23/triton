@@ -21,7 +21,7 @@ class EnableLocation extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text("Enable Your Location",textAlign: TextAlign.center,),
+              const Text("Enable Your Location",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),),
               const Gap(40),
               SvgPicture.asset(
                 "assets/svg/location.svg",
@@ -29,7 +29,7 @@ class EnableLocation extends StatelessWidget {
                 width: 200,
               ),
              const Gap(30),
-              const Text("Please allow us to to access your\n location service"),
+              const Text("Please allow us to to access your\n location service", textAlign: TextAlign.center,),
               const Gap(30),
               customButton(text: "Enable Location", textColor: AppColors.white, btnColor: AppColors.blue, height: 50,
                   width: 200,

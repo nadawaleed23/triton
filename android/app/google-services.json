@@ -13,7 +13,12 @@
           "package_name": "com.example.triton"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "115183806146-vbh2g215b6bioi63pup29k0uhflg0ur4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB-UTCksZCe_j8ccQC0Dy92mVYL69ePLMU"
@@ -21,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115183806146-vbh2g215b6bioi63pup29k0uhflg0ur4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

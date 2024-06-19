@@ -8,6 +8,7 @@ import 'package:triton/core/localization/changeLocal.dart';
 import 'package:triton/core/localization/languages.dart';
 import 'package:triton/core/services/services.dart';
 import 'package:triton/routes.dart';
+import 'package:triton/view/screen/about.dart';
 import 'package:triton/view/screen/enableLocation.dart';
 import 'package:triton/view/screen/home.dart';
 import 'package:triton/view/screen/onboardind.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    LocaleCon controller = Get.put(LocaleCon());
+   LocaleCon controller = Get.put(LocaleCon());
     return GetMaterialApp(
       translations: AppLang(),
       debugShowCheckedModeBanner: false,
@@ -42,9 +43,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   Home(),
+     // home:   AboutUs(),
 
-     // getPages: routes,
+     getPages: routes,
      initialBinding: InitialBindings(),
     );
   }
